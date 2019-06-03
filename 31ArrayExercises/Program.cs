@@ -13,7 +13,8 @@ namespace _31ArrayExercises
             //Ex1();
             //Ex2();
             //Ex3();
-            Ex4();
+            //Ex4();
+            Ex5();
         }
 
         static void Ex1()
@@ -66,6 +67,35 @@ namespace _31ArrayExercises
                 arrCopy[i] = arr[i];
                 Console.WriteLine($"{arr[i]}, {arrCopy[i]}");
             }
+        }
+
+        static void Ex5()
+        {
+            //Write a program in C# Sharp to count a total number of duplicate elements in an array.
+            int[] arr = { 5, 2, 7, 7, 5, };
+            int dupe = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int repeat = 0;
+                for (int k = i - 1; k >= 0; k--)
+                {
+                    if (arr[i] == arr[k])
+                    {
+                        repeat++;
+                    }
+                }
+                if (repeat == 0)
+                {
+                    for (int j = i + 1; j < arr.Length; j++)
+                    {
+                        if (arr[i] == arr[j])
+                        {
+                            dupe++;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(dupe);
         }
     }
 }
