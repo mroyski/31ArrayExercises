@@ -10,8 +10,10 @@ namespace _31ArrayExercises
     {
         static void Main(string[] args)
         {
-            Ex1();
+            //Ex1();
+            Ex2();
         }
+
         static void Ex1()
         {
             //Write a program in C# Sharp to store elements in an array and print it.
@@ -19,6 +21,23 @@ namespace _31ArrayExercises
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.WriteLine(arr[i]);
+            }
+        }
+
+        static void Ex2()
+        {
+            //Write a program in C# Sharp to read n number of values in an array and display it in reverse order.
+            int[] arr = { 2, 5, 7 };
+            int[] arr2 = new int[arr.Length];
+            int count = 0;
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                arr2[count] = arr[i];
+                count++;
+            }
+            for (int j = 0; j < arr.Length; j++)
+            {
+                Console.WriteLine($"{j} : {arr[j]} , {arr2[j]}");
             }
         }
     }
