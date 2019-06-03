@@ -12,7 +12,8 @@ namespace _31ArrayExercises
         {
             //Ex1();
             //Ex2();
-            Ex3();
+            //Ex3();
+            Ex4();
         }
 
         static void Ex1()
@@ -52,6 +53,19 @@ namespace _31ArrayExercises
                 sum += arr[i];
             }
             Console.WriteLine(sum);
+        }
+
+        static void Ex4()
+        {
+            //Write a program in C# Sharp to copy the elements one array into another array.
+            int[] arr = { 15, 10, 12 };
+            int[] arrCopy = new int[arr.Length];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arrCopy[i] = arr[i];
+                Console.WriteLine($"{arr[i]}, {arrCopy[i]}");
+            }
         }
     }
 }
