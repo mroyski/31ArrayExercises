@@ -11,7 +11,8 @@ namespace _31ArrayExercises
         static void Main(string[] args)
         {
             //Ex1();
-            Ex2();
+            //Ex2();
+            Ex3();
         }
 
         static void Ex1()
@@ -39,6 +40,18 @@ namespace _31ArrayExercises
             {
                 Console.WriteLine($"{j} : {arr[j]} , {arr2[j]}");
             }
+        }
+
+        static void Ex3()
+        {
+            //Write a program in C# Sharp to find the sum of all elements of the array.
+            int[] arr = { 2, 5, 8 };
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            Console.WriteLine(sum);
         }
     }
 }
